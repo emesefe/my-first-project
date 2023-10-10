@@ -29,7 +29,9 @@ public class MyFirstScript : MonoBehaviour
 
     [SerializeField] private int hour;
 
+    [SerializeField] private float num;
 
+    [SerializeField] private int lives;
 
     private void Start()
     {
@@ -98,6 +100,7 @@ public class MyFirstScript : MonoBehaviour
         Debug.Log(hour % 5);
         */
         
+        /*
         // OPERADORES CONDICIONALES
         // Igualdad ==
         // true si los objetos son iguales
@@ -128,5 +131,16 @@ public class MyFirstScript : MonoBehaviour
         // true si el número de la izq es mayor o igual al de la der
         // false si el número de la izq es menor al de la der
         Debug.Log(num1 >= num2);
+        */
+
+        if (num > 0)
+        {
+            Debug.Log($"{num} es positivo");
+        }
+
+        if (lives <= 0)
+        {
+            Debug.Log("GAME OVER");
+        }
     }
 }
