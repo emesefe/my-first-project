@@ -50,6 +50,7 @@ public class ConditionalOperators : MonoBehaviour
         // false si el número de la izq es menor al de la der
         Debug.Log(num1 >= num2);
 
+        // OPERADORES DE DECISIÓN
         // OPERADOR DE DECISIÓN IF
         if (num > 0)
         {
@@ -109,7 +110,5 @@ public class ConditionalOperators : MonoBehaviour
         {
             Debug.Log("Es domingo");
         }
-        
-        // OPERADORES DE DECISIÓN 
     }
 }
