@@ -19,6 +19,10 @@ public class ConditionalOperators : MonoBehaviour
     
     [SerializeField] private int grade = 7;
     
+    private bool isMonday = false; 
+    private bool isTuesday = false; 
+    private bool computersWork = true;
+    
     private void Start()
     {
         // OPERADORES CONDICIONALES
@@ -171,6 +175,45 @@ public class ConditionalOperators : MonoBehaviour
             Debug.Log("Suspenso");
         }
         
-        // AND
+        // AND (&&)
+        // c1 && c2
+        // t && t -> t
+        // t && f -> f
+        // f && t -> f
+        // f && f -> f
+
+        if (isMonday && computersWork)
+        {
+	        Debug.Log("Tenemos clase de RPMI");
+        }
+        else
+        {
+	        Debug.Log("No hay clase");
+        }
+    
+        // OR(||)
+        // c1 || c2
+        // t || t -> t
+        // t || f -> t
+        // f || t -> t
+        // f || f -> f
+
+        if (isMonday || isTuesday)
+        {
+	        if (computersWork)
+	        {
+		        Debug.Log("Hay clase de RPMI");
+	        }
+        }
+
+        if ((isMonday || isTuesday) && computersWork)
+        {
+	        Debug.Log("Hay clase de RPMI");
+        }
+        else
+        {
+	        Debug.Log("NO hay clase de RPMI");
+        }
+
     }
 }
