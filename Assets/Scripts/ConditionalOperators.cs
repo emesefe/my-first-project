@@ -17,6 +17,8 @@ public class ConditionalOperators : MonoBehaviour
     private bool friday = false;
     private bool saturday = false;
     
+    [SerializeField] private int grade = 7;
+    
     private void Start()
     {
         // OPERADORES CONDICIONALES
@@ -82,6 +84,7 @@ public class ConditionalOperators : MonoBehaviour
         }
         
         // OPERADOR DE DECISIÓN IF-ELSE-IF
+        // * Ejemplo con días de la semana
         if (monday)
         {
             Debug.Log("Es lunes");
@@ -110,5 +113,64 @@ public class ConditionalOperators : MonoBehaviour
         {
             Debug.Log("Es domingo");
         }
+        
+        // * Ejemplo con vidas restantes del jugador
+        if (lives <= 0)
+        {
+            Debug.Log("GAME OVER");
+        }
+        else if (lives <= 1)
+        {
+            Debug.Log("Solo te queda una vida");
+        }
+        else if (lives <= 5)
+        {
+            Debug.Log("Ve con precaución que te quedan pocas vidas");
+        }
+        
+        // OPERADORES DE DECISIÓN ANIDADOS
+        // Suspenso, Aprobado (>= 5), Notable bajo (=7), alto (=8) (>=7), Excelente (>= 9)
+        if (grade >= 9)
+        {
+            Debug.Log("Excelente");
+            if (grade == 9)
+            {
+                Debug.Log("Excelente");
+            }
+            if (grade == 10)
+            {
+                Debug.Log("Matrícula de honor");
+            }
+        }
+        else if (grade >= 7)
+        {
+            Debug.Log("Notable");
+            if (grade == 8)
+            {
+                Debug.Log("Notable alto");
+            }
+            else
+            {
+                Debug.Log("Notable bajo");
+            }
+        }
+        else if (grade >= 5)
+        {
+            Debug.Log("Aprobado");
+            if (grade == 6)
+            {
+                Debug.Log("Aprobado alto");
+            }
+            if (grade == 5)
+            {
+                Debug.Log("Aprobado bajo");
+            }
+        }
+        else
+        {
+            Debug.Log("Suspenso");
+        }
+        
+        // AND
     }
 }
