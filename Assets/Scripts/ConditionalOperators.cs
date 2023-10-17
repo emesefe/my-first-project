@@ -23,6 +23,13 @@ public class ConditionalOperators : MonoBehaviour
     private bool isTuesday = false; 
     private bool computersWork = true;
     
+    private bool isGameOver = true;
+    private bool isOnTheFloor = true;
+    private int maxJumps = 2;
+    private int totalJumps = 0;
+
+    private int age = 18;
+    
     private void Start()
     {
         // OPERADORES CONDICIONALES
@@ -214,6 +221,42 @@ public class ConditionalOperators : MonoBehaviour
         {
 	        Debug.Log("NO hay clase de RPMI");
         }
+        
+        // NOT !
+        // !true = false
+        // !false = true
 
+        if (!isGameOver)
+        {
+            Debug.Log("Estamos vivos");
+        }
+        else
+        {
+            Debug.Log("Game over");
+        }
+
+        if (!isOnTheFloor)
+        {
+            if (totalJumps < maxJumps) {
+                // Saltamos
+                totalJumps++;
+            }
+        }
+
+        if (age >= 18)
+        {
+
+        }
+
+        // ==
+        // !=
+        // >
+        // <
+        // >=
+        // <=
+
+        // == y !=
+        // > y <=
+        // < y >=
     }
 }
